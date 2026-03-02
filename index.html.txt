@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipes – Responsive Design</title>
+
+  <link rel="stylesheet" href="styles/reset.css" />
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">Food.</div>
+
+      <nav aria-label="Primary">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="#">Food</a></li>
+          <li><a class="nav-link" href="#">Recipes</a></li>
+          <li><a class="nav-link" href="#">About</a></li>
+          <li><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="container">
+      <section class="card recipe" aria-label="Recipe hero">
+        <div class="recipe-content">
+          <p class="kicker">Recipes</p>
+          <h1 class="title">Pumpkin Soup</h1>
+          <p class="text">
+            A warm and simple soup that works year-round. This layout adapts across screen sizes
+            and uses adaptive graphics for different resolutions and pixel densities.
+          </p>
+
+          <p class="meta">
+            <span>⏱ 25 min</span>
+            <span>🍽 2 servings</span>
+            <span>⭐ Easy</span>
+          </p>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#">Read recipe</a>
+            <a class="btn" href="#">Save</a>
+          </div>
+        </div>
+
+        <div class="recipe-media">
+          <!-- Adaptive Graphics: different images for different screens + retina -->
+          <picture>
+            <source
+              media="(min-width: 1024px)"
+              srcset="
+                images/recipe-1440.jpg 1x,
+                images/recipe-1440@2x.jpg 2x
+              "
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="
+                images/recipe-960.jpg 1x,
+                images/recipe-960@2x.jpg 2x
+              "
+            />
+            <img
+              src="images/recipe-480.jpg"
+              srcset="
+                images/recipe-480.jpg 1x,
+                images/recipe-480@2x.jpg 2x
+              "
+              alt="Pumpkin soup in a bowl"
+              loading="lazy"
+            />
+          </picture>
+        </div>
+      </section>
+    </div>
+  </main>
+
+</body>
+</html>
